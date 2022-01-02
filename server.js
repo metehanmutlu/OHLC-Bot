@@ -14,7 +14,7 @@ app.get('/api/data/', (req, res) => {
             // console.log(queries.symbol, queries.period, 'server');
             let lastData = readLastData()[queries.symbol];
             res.json(lastData);
-        }, 1000);
+        }, 500);
     }
 });
 
