@@ -5,6 +5,10 @@ const readLastData = require('./modules/readLastData');
 const app = express();
 
 
+app.use('/', (req, res) => {
+    res.send('Use With `https://ohlc-tw-bot.herokuapp.com/api/data/?symbol=UNISWAP:HEXUSDT&period=1D`')
+})
+
 app.get('/api/data/', (req, res) => {
     const queries = req.query;
     if (queries.hasOwnProperty('symbol') && queries.hasOwnProperty('period')) {
